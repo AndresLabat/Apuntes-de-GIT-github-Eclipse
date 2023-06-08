@@ -1,6 +1,6 @@
 package ControlDeVersiones;
 
-public class apuntesPaginaInteractiva {
+public class Apuntes_pagina_interactiva {
 
 	/*	CONCEPTOS:
 	 

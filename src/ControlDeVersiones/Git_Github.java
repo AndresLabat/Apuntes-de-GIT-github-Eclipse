@@ -1,14 +1,14 @@
 package ControlDeVersiones;
 
-public class GitGithub {
+public class Git_Github {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 			/*
-			APLICACION GIT:
+	APLICACION GIT:
 			
-			COMANDOS DE CONSOLA:
+	COMANDOS DE CONSOLA:
 
 			- git init: se ejecuta una vez, al comenzar nuestro proyecto o cuando queremos que git comience un seguimiento del mismo
 
@@ -37,7 +37,7 @@ public class GitGithub {
 			- git commit -am: realiza el add y el commit a la vez en un solo comando
 				ejemplo: git commit -am "segundo commit"
 				
-			PARA MODIFICAR EL NOMBRE DE UN COMMIT:	
+	PARA MODIFICAR EL NOMBRE DE UN COMMIT:	
 				
 			- git commit --amend: con esto abres el editor VIM 
 				dentro del editor ponemos :i para entrar el modo edicion
@@ -48,6 +48,8 @@ public class GitGithub {
 				ahora escribimos el nombre correcto y pulsamos enter
 				
 				usamos el commando :wq para salir del editor
+				
+	CREAR REPOSITORIO GITHUB:			
 				
 			PARA CREAR UN NUEVO REPOSITORIO EN GITHUB:
 			
@@ -62,9 +64,19 @@ public class GitGithub {
 			
 			seleccionamos el commit que nos interesa, despues el archivo a modificar, le damos al boton con forma de lapiz y programamos.
 			
+	GIT PULL, DE REMOTO A LOCAL:		
+			
 			COMO DESCARGAR DEL REPOSITORIO A LOCAL
 			
 			git pull: ha actualizado directamente mi repositorio local con la modificaciones que hay en el remoto
+			
+			COMO HACER UN PULL A UNA RAMA EN CONCRETO DE MI LOCAL:
+			
+			git pull origin NOMBRE_DE_LA_RAMA
+				origin: es mi repositorio remoto(github)
+				NOMBRE_DE_LA_RAMA: es la rama donde quiero que me lo descargue
+			
+	TAGS:		
 			
 			COMO CREAR UN TAG:
 			
@@ -85,9 +97,25 @@ public class GitGithub {
 			despues vamos a la carpeta donde queremos clonarlo, desde alli abrimos consola e introducimos:
 			git clone URLcopiada
 			
+	RAMAS:	
+			
 			PARA CREAR UNA NUEVA RAMA		
 
 			git branch nombreRama: crea una nueva rama con el nombre de nombreRama
+			git checkout -b nombreRama: crea una nueva rama con el nombre de nombreRama y se situa en ella
+			
+			PARA CREAR UNA NUEVA RAMA DESDE UN COMMIT EN CONCRETO
+			
+			primero hago git checkout nombreRama para situarme en la rama donde esta ese commit
+			luego hago un git log --oneline para ver el ID del commit que me interesa
+			por ultimo introduzco: git branch nombreRama ID.
+				ejemplo: git branch RamaNueva 7127c60
+				
+			PARA CREAR UNA RAMA EN OTRA RAMA
+			
+			primero hago git checkout nombreRama para situarme en la rama donde quiero hacerlo, y en su ultimo commit
+			git branch nombreDeLaNuevaRama nombreDeLaRamaDondeEstoy	
+				ejemplo: git branch RamaMejoraDemo RamaDemo
 			
 			PARA VER LAS RAMAS DEL PROYECTO Y EN QUE RAMA ME ENCUENTRO
 			
@@ -103,17 +131,23 @@ public class GitGithub {
 			me situo primer en la rama "main" o "master", luego introduzco:
 			
 			- git merge nombreRama: une la rama main con la rama nombreRama
+			
+	PUSH A GITHUB:		
 
 			PARA SUBIR A GITHUB NUESTROS CAMBIOS
 			
 			git push -u origin main: git push -u (donde los copio)(de que lugar) significa coge todos los commits de mi rama main del repositorio 
 			local y copialos en el main del remoto llamado origin
-			origin significa (a tu main)
+			origin significa en mi remoto (github)
 			main significa (desde mi main)
+			
+	CLONAR UN REPOSITORIO REMOTO A LOCAL:		
 			
 			PARA BAJAR UN REPOSITORIO A UNA CARPETA VACIA
 
 			dentro de esa carpeta abrimos el git bash e introducimos git clone
+			
+	BORRAR COMMITS EN LOCAL:		
 			
 			PARA BORRAR UN COMMIT DE MI REPOSITORIO LOCAL (GIT RESET)
 						
@@ -127,6 +161,53 @@ public class GitGithub {
 				
 			al hacer esto, si ahora hacemos un git log --oneline para ver el listado, veremos que todos los commit posteriores al
 			que hemos vuelto ya no estan alli
+			
+	MERGE (unir dos ramas en un commit):
+	
+			se utiliza cuando trabajamos con un repositorio remoto donde trabajan mas personas
+			
+			- git merge nombreRamaFusionar: situados en la rama principal, le indicamos que rama queremos mergear con ella
+				ejemplo: git merge ramaNueva1
+			
+	REBASE (copiar el ultimo commit de una rama en el ultimo de otra):
+	
+			se utiliza cuando trabajamos con repositorio local
+			
+			la diferencia con el merge es que no genera un commit nuevo, solo pega y une los commit implicados en el rebase
+
+			- git rebase nombreRamaFusionar: situados en la rama principal, le indicamos que rama queremos rebasear con ella
+				ejemplo: git rebase ramaNueva1
+
+	GIT STASH (aparcar trabajo):
+	
+			se utiliza cuando trabajamos con repositorio local
+
+			- git stash: aquellos cambios que hemos realizado en los ficheros en los que estamos trabajando y que con un git status -s
+			nos salen en rojo, en lugar de hacer add . y luego comitearlos, podemos dejarlo guardados en esa zona intermedia con git stash
+			
+			esto sucede cuando estamos trabajando con unos ficheros y nos piden algo urgente en otra parte, de esta forma lo tenemos guardado
+			y no lo perdemos.
+			
+			- git stash apply: con esto volvemos al punto en el que estabamos antes de hacer el git stash
+			
+	CHERRY-PICKING (copiar commits concretos en otros commits):
+	
+			- git cherry-pick: sirve para copiar un commit concreto a continuacion de otro commit que queramos.
+				
+			PROCESO:
+				
+			1) primero nos situamos en la rama donde tenemos el commit que queremos copiar con git checkout nombreRama
+			2) ahora hacemos un git log --line y vemos el ID de nuestro commit, lo copiamos
+			3) ahora nos vamos a la rama donde lo queremos copiar con un git checkout nombreRama
+			4) a continuacion usamos git cherry-pick ID
+		
+				ejemplo: git cherry-pick 482a5c
+				
+			si queremos hacerlo de varios commit a la vez tambien podemos, es el mismo proceso de antes y al final, poner las ID seguidas:
+			
+				ejemplo: git cherry-pick 482a5c 89g52e 3f518a
+			
+			
 			
 
 		*/	
