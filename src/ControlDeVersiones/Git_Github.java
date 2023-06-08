@@ -207,8 +207,38 @@ public class Git_Github {
 			
 				ejemplo: git cherry-pick 482a5c 89g52e 3f518a
 			
+	GIT DIFF (te lista los cambios en los archivos que no has metido aun con add)
+	
+			- git diff: muestra los cambios efectuados en tus ficheros desde el ultimo add
+			en verde y con ++ lo que has añadido
+			en rojo y con -- lo que has eliminado
 			
+			para cerrar esto escribe: wq
 			
+	FORKING WORKFLOW (copiar un repositorio de github de alguien en nuestro github):
+		
+			se realiza a traves de GitHub parte del proceso
+			
+			HACER UN FORK:
+			
+			consiste en clonarme un repositorio remoto, realizar los cambios y despues, solicitar a su autor original que meta los cambios
+			
+			1) vamos al repositorio de github que queremos copiar, le damos al boton fork(arriba a la derecha) y realiza la copia en nuestro repositorio
+			2) copiamos la URL de Code y hacemos un git clone URL en la carpeta que queramos que se copie
+			3) realizamos los cambios y creamos nuestro repositorio local con ellos: git init, git add ., git commit -m "nombre del commit"
+			4) realizamos un git push URL, y este nos lo hara en nuestro repositorio de github, que es una copia del original
+			5) para poder enviar esto al autor original, tengo que realizar una pull request (tambien llamado PR)
+			
+	PULL REQUEST o PR (propuesta con los cambios realizados del repositorio original):
+			
+				PASOS:
+				- en nuestro repositorio (que es una copia del original), al lado de "Code", pulsamos en "contribute", y en "Open pull request" 
+				- te sale una pantalla con el repositorio original y los cambios realizados, añadidos en verde, eliminados en rojo, 
+				pulso "Create pull request"
+				- ahora añadimos la descripcion que nosotros queramos, pulsamos "Create pull request"
+			
+		21:13
+
 
 		*/	
 		
