@@ -1,12 +1,12 @@
 package ControlDeVersiones;
 
-public class paraborrar2 {
+public class paraborrar4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		System.out.println("tambien para borrar");
 		
+		System.out.print("matame por favor");
+
 	}
 
 }
