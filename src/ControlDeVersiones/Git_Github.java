@@ -231,15 +231,13 @@ public class Git_Github {
 			
 	PULL REQUEST o PR (propuesta con los cambios realizados del repositorio original):
 			
-				PASOS:
-				- en nuestro repositorio (que es una copia del original), al lado de "Code", pulsamos en "contribute", y en "Open pull request" 
-				- te sale una pantalla con el repositorio original y los cambios realizados, añadidos en verde, eliminados en rojo, 
-				pulso "Create pull request"
-				- ahora añadimos la descripcion que nosotros queramos, pulsamos "Create pull request"
+			PASOS:
+			- en nuestro repositorio (que es una copia del original), al lado de "Code", pulsamos en "contribute", y en "Open pull request" 
+			- te sale una pantalla con el repositorio original y los cambios realizados, añadidos en verde, eliminados en rojo, 
+			pulso "Create pull request"				
+			- ahora añadimos la descripcion que nosotros queramos, pulsamos "Create pull request"
 			
-		21:13
-
-
+	
 		*/	
 		
 	}
